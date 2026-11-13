@@ -7,6 +7,8 @@ My GitHub Pages front page, live at **[code.benweese.com](https://code.benweese.
 
 It's plain HTML and CSS with no framework and no build step: `index.html`, `styles.css`, `gears.css` and `gears.js` (the ticking-gears hero), `favicon.png` and a self-hosted Manrope font in `fonts/` (SIL Open Font License, in `fonts/OFL.txt`). `package.json` is for the tests only; nothing in it ships.
 
+By **[Ben Weese](https://benweese.com/)**
+
 ## Tests
 
 A small Playwright suite in [`tests/`](tests/) checks that:
