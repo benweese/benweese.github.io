@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta
 			http-equiv="Content-Security-Policy"
-			content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self' https://github.com; base-uri 'none'; form-action 'none'"
+			content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' https://github.com; base-uri 'none'; form-action 'none'"
 		/>
 		<title>Ben Weese · Playwright automation projects</title>
 		<meta
@@ -19,6 +19,8 @@
 		<link rel="apple-touch-icon" href="favicon.png" />
 		<link rel="preload" href="fonts/manrope-latin-wght.woff2" as="font" type="font/woff2" crossorigin />
 		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="gears.css" />
+		<script src="gears.js" defer></script>
 
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://code.benweese.com/" />
@@ -59,7 +61,8 @@
 		<a class="skip-link" href="#main">Skip to content</a>
 
 		<header class="hero">
-			<div class="wrap">
+			<div class="wrap hero-grid">
+				<div class="hero-copy">
 				<h1>Ben Weese</h1>
 				<p class="roles">
 					Senior QA Engineer · Playwright Automation Architect · Building AI test generation with Claude Code
@@ -70,6 +73,12 @@
 					<li><a class="button" href="https://benweese.com/resume/">Resume</a></li>
 					<li><a class="button" href="https://www.linkedin.com/in/benweese/">LinkedIn</a></li>
 				</ul>
+				</div>
+				<div class="bwg" data-bwg data-bwg-every="60" data-bwg-first="35">
+				<div class="bwg-box"><svg class="bwg-svg" viewBox="180 -25 580 705" aria-hidden="true" focusable="false"><g transform="translate(560 170) scale(1.25)"><g class="bwg-gear bwg-a"><path d="M-13.6,-123.3 L-10.2,-149.7 L10.2,-149.7 L13.6,-123.3 A124.0,124.0 0 0 1 49.8,-113.5 L49.8,-113.5 L66.0,-134.7 L83.7,-124.5 L73.4,-99.9 A124.0,124.0 0 0 1 99.9,-73.4 L99.9,-73.4 L124.5,-83.7 L134.7,-66.0 L113.5,-49.8 A124.0,124.0 0 0 1 123.3,-13.6 L123.3,-13.6 L149.7,-10.2 L149.7,10.2 L123.3,13.6 A124.0,124.0 0 0 1 113.5,49.8 L113.5,49.8 L134.7,66.0 L124.5,83.7 L99.9,73.4 A124.0,124.0 0 0 1 73.4,99.9 L73.4,99.9 L83.7,124.5 L66.0,134.7 L49.8,113.5 A124.0,124.0 0 0 1 13.6,123.3 L13.6,123.3 L10.2,149.7 L-10.2,149.7 L-13.6,123.3 A124.0,124.0 0 0 1 -49.8,113.5 L-49.8,113.5 L-66.0,134.7 L-83.7,124.5 L-73.4,99.9 A124.0,124.0 0 0 1 -99.9,73.4 L-99.9,73.4 L-124.5,83.7 L-134.7,66.0 L-113.5,49.8 A124.0,124.0 0 0 1 -123.3,13.6 L-123.3,13.6 L-149.7,10.2 L-149.7,-10.2 L-123.3,-13.6 A124.0,124.0 0 0 1 -113.5,-49.8 L-113.5,-49.8 L-134.7,-66.0 L-124.5,-83.7 L-99.9,-73.4 A124.0,124.0 0 0 1 -73.4,-99.9 L-73.4,-99.9 L-83.7,-124.5 L-66.0,-134.7 L-49.8,-113.5 A124.0,124.0 0 0 1 -13.6,-123.3 Z M46,0 A46,46 0 1 0 -46,0 A46,46 0 1 0 46,0 Z" fill="#FF7A1A" fill-opacity="0.55" fill-rule="evenodd"/></g></g><g transform="translate(386.9 469.9) scale(1.25) rotate(15.0)"><g class="bwg-gear bwg-b"><path d="M-13.6,-123.3 L-10.2,-149.7 L10.2,-149.7 L13.6,-123.3 A124.0,124.0 0 0 1 49.8,-113.5 L49.8,-113.5 L66.0,-134.7 L83.7,-124.5 L73.4,-99.9 A124.0,124.0 0 0 1 99.9,-73.4 L99.9,-73.4 L124.5,-83.7 L134.7,-66.0 L113.5,-49.8 A124.0,124.0 0 0 1 123.3,-13.6 L123.3,-13.6 L149.7,-10.2 L149.7,10.2 L123.3,13.6 A124.0,124.0 0 0 1 113.5,49.8 L113.5,49.8 L134.7,66.0 L124.5,83.7 L99.9,73.4 A124.0,124.0 0 0 1 73.4,99.9 L73.4,99.9 L83.7,124.5 L66.0,134.7 L49.8,113.5 A124.0,124.0 0 0 1 13.6,123.3 L13.6,123.3 L10.2,149.7 L-10.2,149.7 L-13.6,123.3 A124.0,124.0 0 0 1 -49.8,113.5 L-49.8,113.5 L-66.0,134.7 L-83.7,124.5 L-73.4,99.9 A124.0,124.0 0 0 1 -99.9,73.4 L-99.9,73.4 L-124.5,83.7 L-134.7,66.0 L-113.5,49.8 A124.0,124.0 0 0 1 -123.3,13.6 L-123.3,13.6 L-149.7,10.2 L-149.7,-10.2 L-123.3,-13.6 A124.0,124.0 0 0 1 -113.5,-49.8 L-113.5,-49.8 L-134.7,-66.0 L-124.5,-83.7 L-99.9,-73.4 A124.0,124.0 0 0 1 -73.4,-99.9 L-73.4,-99.9 L-83.7,-124.5 L-66.0,-134.7 L-49.8,-113.5 A124.0,124.0 0 0 1 -13.6,-123.3 Z M46,0 A46,46 0 1 0 -46,0 A46,46 0 1 0 46,0 Z" fill="#FF7A1A" fill-opacity="0.44" fill-rule="evenodd"/></g></g></svg><svg class="bwg-moth" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M9 4.5 Q7.5 2 6 1.2 M11 4.5 Q12.5 2 14 1.2" stroke="#CFC8BC" stroke-width="0.9" fill="none" stroke-linecap="round"/><g class="bwg-wings"><path d="M10 5 L2.5 16.5 Q6 18.5 10 15.5 Q14 18.5 17.5 16.5 Z" fill="#CFC8BC"/></g><ellipse cx="10" cy="9.5" rx="1.5" ry="5.5" fill="#8E877C"/></svg></div>
+				<p class="bwg-note" aria-hidden="true"><b>Sep 9, 1947</b> · A moth jams the Harvard Mark II, logged as the &ldquo;first actual case of bug being found.&rdquo;</p>
+				<button type="button" class="bwg-pause"><span class="bwg-icon" aria-hidden="true">&#10074;&#10074;</span><span class="bwg-label">Pause animation</span></button>
+				</div>
 			</div>
 		</header>
 

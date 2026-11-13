@@ -182,6 +182,24 @@ main:focus {
 	background: var(--text);
 }
 
+.hero-grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+	gap: clamp(1.5rem, 4vw, 3rem);
+	align-items: center;
+}
+
+@media (max-width: 781px) {
+	.hero-grid {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	/* Gears above the name on phones, like benweese.com */
+	.hero-grid .bwg {
+		order: -1;
+	}
+}
+
 /* Sections */
 main > section {
 	padding-block: clamp(2rem, 6vw, 3.5rem);
