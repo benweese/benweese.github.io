@@ -5,11 +5,14 @@ on:
         branches: [main]
     pull_request:
     workflow_dispatch:
+    schedule:
+        - cron: "17 6 * * 1" # Mondays: catch links that broke since the last push
 
 permissions:
     contents: read
 
 jobs:
+    # The page itself: loads, axe, 320px, skip link, reduced motion, meta. Gates the deploy.
     test:
         runs-on: ubuntu-latest
         steps:
@@ -20,27 +23,37 @@ jobs:
                   cache: npm
             - run: npm ci
             - run: npx playwright install --with-deps chromium
-            - run: npx playwright test
+            - run: npx playwright test --grep-invert @links
             - uses: actions/upload-artifact@v7
               if: ${{ !cancelled() }}
               with:
                   name: playwright-report
                   path: playwright-report/
                   retention-days: 14
-            # Only the site's own files go to Pages: no tests, tooling or node_modules.
-            - name: Collect the site
-              if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
-              run: |
-                  mkdir _site
-                  cp -r index.html styles.css favicon.png fonts _site/
-            - uses: actions/upload-pages-artifact@v5
-              if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+
+    # Every link on the page resolves. Reported (a red check on a 404), but it doesn't block a
+    # deploy: the page shouldn't stay unpublished because another site is down.
+    links:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v7
+            - uses: actions/setup-node@v7
               with:
-                  path: _site
+                  node-version-file: .nvmrc
+                  cache: npm
+            - run: npm ci
+            - run: npx playwright install --with-deps chromium
+            - run: npx playwright test --grep @links
+            - uses: actions/upload-artifact@v7
+              if: ${{ !cancelled() }}
+              with:
+                  name: links-report
+                  path: playwright-report/
+                  retention-days: 14
 
     deploy:
         needs: test
-        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
         runs-on: ubuntu-latest
         permissions:
             pages: write
@@ -52,5 +65,14 @@ jobs:
             group: pages
             cancel-in-progress: false
         steps:
+            - uses: actions/checkout@v7
+            # Only the site's own files go to Pages: no tests, tooling or node_modules.
+            - name: Collect the site
+              run: |
+                  mkdir _site
+                  cp -r index.html styles.css favicon.png fonts _site/
+            - uses: actions/upload-pages-artifact@v5
+              with:
+                  path: _site
             - id: deployment
               uses: actions/deploy-pages@v5

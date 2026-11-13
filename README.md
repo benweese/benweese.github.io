@@ -30,4 +30,9 @@ npm run serve       # just serve it, to look at the page
 
 ## Deploys
 
-[`.github/workflows/site.yml`](.github/workflows/site.yml) runs the tests on every pull request and push. A push to `main` deploys to GitHub Pages only if they pass. Only the deploy job has `pages: write` and `id-token: write`; everything else is read-only. Pages publishes only the site's own files, never `tests/` or `node_modules/`.
+[`.github/workflows/site.yml`](.github/workflows/site.yml) runs on every pull request and push, plus weekly:
+
+- **test** checks the page itself, and a push to `main` deploys to GitHub Pages only if it passes
+- **links** checks every link separately. A 404 shows as a failed check but doesn't block a deploy, so the page never stays unpublished because another site is down
+
+Only the deploy job has `pages: write` and `id-token: write`; everything else is read-only. Pages publishes only the site's own files, never `tests/` or `node_modules/`.

@@ -7,7 +7,7 @@ import { test, expect } from "@playwright/test";
  */
 const BLOCKS_BOTS = new Set([401, 403, 429, 999]);
 
-test("every link resolves", async ({ page, request }) => {
+test("every link resolves @links", async ({ page, request }) => {
 	test.setTimeout(90_000);
 	await page.goto("/");
 	const urls = await page.evaluate(() => [
