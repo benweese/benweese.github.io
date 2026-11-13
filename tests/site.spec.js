@@ -33,9 +33,9 @@ test.describe("front page", () => {
 	test("has the meta tags, share card and Person JSON-LD", async ({ page }) => {
 		await page.goto("/");
 		const meta = (selector) => page.locator(selector).first().getAttribute("content");
-		expect(await page.locator('link[rel="canonical"]').getAttribute("href")).toBe("https://benweese.github.io/");
+		expect(await page.locator('link[rel="canonical"]').getAttribute("href")).toBe("https://code.benweese.com/");
 		expect(await meta('meta[name="description"]')).toBeTruthy();
-		expect(await meta('meta[property="og:url"]')).toBe("https://benweese.github.io/");
+		expect(await meta('meta[property="og:url"]')).toBe("https://code.benweese.com/");
 		const card = "https://benweese.com/wp-content/uploads/2026/11/benweese-share-card.png";
 		expect(await meta('meta[property="og:image"]')).toBe(card);
 		expect(await meta('meta[name="twitter:image"]')).toBe(card);

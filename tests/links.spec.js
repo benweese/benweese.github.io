@@ -61,7 +61,7 @@ async function statusOf(request, url) {
 			const response = await request.get(url, {
 				maxRedirects: 10,
 				timeout: 20_000,
-				headers: { "user-agent": "Mozilla/5.0 (link check; +https://benweese.github.io/)" }
+				headers: { "user-agent": "Mozilla/5.0 (link check; +https://code.benweese.com/)" }
 			});
 			if (response.status() < 500 || attempt === 2) {
 				return response.status();

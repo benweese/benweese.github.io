@@ -3,7 +3,7 @@
 [![Test and deploy](https://github.com/benweese/benweese.github.io/actions/workflows/site.yml/badge.svg)](https://github.com/benweese/benweese.github.io/actions/workflows/site.yml)
 [![Tested with Playwright and axe](https://img.shields.io/badge/tested%20with-Playwright%20%2B%20axe-2EAD33)](tests/)
 
-My GitHub Pages front page, live at **[benweese.github.io](https://benweese.github.io/)**: a single-page hub for my Playwright projects. My main site and blog stay at [benweese.com](https://benweese.com/).
+My GitHub Pages front page, live at **[code.benweese.com](https://code.benweese.com/)**: a single-page hub for my Playwright projects. My main site and blog stay at [benweese.com](https://benweese.com/).
 
 It's plain HTML and CSS with no framework and no build step: `index.html`, `styles.css`, `favicon.png` and a self-hosted Manrope font in `fonts/` (SIL Open Font License, in `fonts/OFL.txt`). `package.json` is for the tests only; nothing in it ships.
 
