@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta
+			http-equiv="Content-Security-Policy"
+			content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self' https://github.com; base-uri 'none'; form-action 'none'"
+		/>
+		<title>Ben Weese · Playwright automation projects</title>
+		<meta
+			name="description"
+			content="Ben Weese, Senior QA Engineer: three open-source Playwright projects in TypeScript. A shared framework, a real API and UI suite, and Claude Code agents that write the tests."
+		/>
+		<link rel="canonical" href="https://benweese.github.io/" />
+		<meta name="color-scheme" content="dark" />
+		<meta name="theme-color" content="#141414" />
+		<link rel="icon" type="image/png" sizes="512x512" href="favicon.png" />
+		<link rel="apple-touch-icon" href="favicon.png" />
+		<link rel="preload" href="fonts/manrope-latin-wght.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="stylesheet" href="styles.css" />
+
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://benweese.github.io/" />
+		<meta property="og:site_name" content="Ben Weese" />
+		<meta property="og:title" content="Ben Weese · Playwright automation projects" />
+		<meta
+			property="og:description"
+			content="Three open-source Playwright projects: a shared TypeScript framework, a real API and UI suite, and Claude Code agents that write the tests."
+		/>
+		<meta property="og:image" content="https://benweese.com/wp-content/uploads/2026/11/benweese-share-card.png" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:image:alt" content="Ben Weese, Senior QA Engineer" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Ben Weese · Playwright automation projects" />
+		<meta
+			name="twitter:description"
+			content="Three open-source Playwright projects: a shared TypeScript framework, a real API and UI suite, and Claude Code agents that write the tests."
+		/>
+		<meta name="twitter:image" content="https://benweese.com/wp-content/uploads/2026/11/benweese-share-card.png" />
+		<meta name="twitter:image:alt" content="Ben Weese, Senior QA Engineer" />
+
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Person",
+				"name": "Ben Weese",
+				"jobTitle": "Senior QA Engineer",
+				"description": "Playwright automation architect building AI test generation with Claude Code.",
+				"url": "https://benweese.com/",
+				"email": "mailto:ben@benweese.com",
+				"image": "https://benweese.com/wp-content/uploads/2026/11/benweese-icon.png",
+				"sameAs": ["https://benweese.com/", "https://www.linkedin.com/in/benweese/", "https://github.com/benweese"]
+			}
+		</script>
+	</head>
+	<body>
+		<a class="skip-link" href="#main">Skip to content</a>
+
+		<header class="hero">
+			<div class="wrap">
+				<h1>Ben Weese</h1>
+				<p class="roles">
+					Senior QA Engineer · Playwright Automation Architect · Building AI test generation with Claude Code
+				</p>
+				<p class="lede">I build automation frameworks, not just tests.</p>
+				<ul class="actions" aria-label="Elsewhere">
+					<li><a class="button button-primary" href="https://benweese.com/">benweese.com</a></li>
+					<li><a class="button" href="https://benweese.com/resume/">Resume</a></li>
+					<li><a class="button" href="https://www.linkedin.com/in/benweese/">LinkedIn</a></li>
+				</ul>
+			</div>
+		</header>
+
+		<main id="main" tabindex="-1">
+			<section class="wrap" aria-labelledby="projects-heading">
+				<h2 id="projects-heading">Projects</h2>
+				<ul class="cards">
+					<li>
+						<article class="card" aria-labelledby="demo-heading">
+							<h3 id="demo-heading">playwright-e2e-demo</h3>
+							<p>
+								A real API and UI test suite for a public practice shop, built on the shared framework and
+								written with the agents, with every run's report published.
+							</p>
+							<ul class="tech" aria-label="Tech">
+								<li>TypeScript</li>
+								<li>Playwright</li>
+								<li>axe-core</li>
+								<li>JSON Schema</li>
+								<li>GitHub Actions</li>
+							</ul>
+							<a class="badge" href="https://github.com/benweese/playwright-e2e-demo/actions/workflows/tests.yml">
+								<img
+									src="https://github.com/benweese/playwright-e2e-demo/actions/workflows/tests.yml/badge.svg"
+									alt="Tests workflow status"
+									height="20"
+									loading="lazy"
+									decoding="async"
+								/>
+							</a>
+							<ul class="links">
+								<li><a href="https://github.com/benweese/playwright-e2e-demo">Repository</a></li>
+								<li><a href="https://benweese.github.io/playwright-e2e-demo/">Live test report</a></li>
+							</ul>
+						</article>
+					</li>
+					<li>
+						<article class="card" aria-labelledby="agents-heading">
+							<h3 id="agents-heading">playwright-ai-qa-agents</h3>
+							<p>
+								A Claude Code plugin whose agents plan test scenarios, stop for human review, then write,
+								run and heal Playwright tests.
+							</p>
+							<ul class="tech" aria-label="Tech">
+								<li>Claude Code</li>
+								<li>AI agents</li>
+								<li>Playwright</li>
+								<li>TypeScript</li>
+							</ul>
+							<a
+								class="badge"
+								href="https://github.com/benweese/playwright-ai-qa-agents/actions/workflows/validate.yml"
+							>
+								<img
+									src="https://github.com/benweese/playwright-ai-qa-agents/actions/workflows/validate.yml/badge.svg"
+									alt="Validate plugin workflow status"
+									height="20"
+									loading="lazy"
+									decoding="async"
+								/>
+							</a>
+							<ul class="links">
+								<li><a href="https://github.com/benweese/playwright-ai-qa-agents">Repository</a></li>
+								<li>
+									<a
+										href="https://github.com/benweese/playwright-ai-qa-agents/blob/main/docs/worked-example.md"
+										>Worked example</a
+									>
+								</li>
+							</ul>
+						</article>
+					</li>
+					<li>
+						<article class="card" aria-labelledby="commons-heading">
+							<h3 id="commons-heading">playwright-test-commons</h3>
+							<p>
+								The shared TypeScript library under my suites: typed API clients, strict schema validation
+								with readable failures, page objects and accessibility scans.
+							</p>
+							<ul class="tech" aria-label="Tech">
+								<li>TypeScript</li>
+								<li>Playwright</li>
+								<li>ajv</li>
+								<li>TypeDoc</li>
+								<li>c8</li>
+							</ul>
+							<a class="badge" href="https://github.com/benweese/playwright-test-commons/actions/workflows/ci.yml">
+								<img
+									src="https://github.com/benweese/playwright-test-commons/actions/workflows/ci.yml/badge.svg"
+									alt="CI workflow status"
+									height="20"
+									loading="lazy"
+									decoding="async"
+								/>
+							</a>
+							<ul class="links">
+								<li><a href="https://github.com/benweese/playwright-test-commons">Repository</a></li>
+								<li><a href="https://benweese.github.io/playwright-test-commons/">API docs</a></li>
+							</ul>
+						</article>
+					</li>
+				</ul>
+			</section>
+
+			<section class="wrap" aria-labelledby="fit-heading">
+				<h2 id="fit-heading">How they fit</h2>
+				<figure class="diagram">
+					<svg viewBox="0 0 360 330" role="img" aria-labelledby="fit-title fit-desc">
+						<title id="fit-title">How the three projects fit together</title>
+						<desc id="fit-desc">
+							playwright-test-commons and playwright-ai-qa-agents both point into playwright-e2e-demo, which
+							points to automationexercise.com.
+						</desc>
+						<defs>
+							<marker
+								id="arrow"
+								viewBox="0 0 10 10"
+								refX="9"
+								refY="5"
+								markerWidth="7"
+								markerHeight="7"
+								orient="auto-start-reverse"
+							>
+								<path d="M0 0 10 5 0 10z" class="arrowhead" />
+							</marker>
+						</defs>
+						<g class="edge">
+							<path d="M85 74 157 146" marker-end="url(#arrow)" />
+							<path d="M275 74 203 146" marker-end="url(#arrow)" />
+							<path d="M180 196V250" marker-end="url(#arrow)" />
+						</g>
+						<g class="edge-label">
+							<text x="78" y="122" text-anchor="middle">pinned tag</text>
+							<text x="282" y="122" text-anchor="middle">plugin</text>
+							<text x="190" y="228">tests</text>
+						</g>
+						<g class="node">
+							<rect x="6" y="20" width="158" height="54" rx="10" />
+							<text x="85" y="52" text-anchor="middle">test-commons</text>
+						</g>
+						<g class="node">
+							<rect x="196" y="20" width="158" height="54" rx="10" />
+							<text x="275" y="52" text-anchor="middle">ai-qa-agents</text>
+						</g>
+						<g class="node node-accent">
+							<rect x="91" y="146" width="178" height="50" rx="10" />
+							<text x="180" y="176" text-anchor="middle">e2e-demo</text>
+						</g>
+						<g class="node node-site">
+							<rect x="71" y="256" width="218" height="54" rx="10" />
+							<text x="180" y="288" text-anchor="middle">automationexercise.com</text>
+						</g>
+					</svg>
+					<figcaption>
+						<strong>commons</strong> is installed into <strong>e2e-demo</strong> as a pinned git tag, the
+						<strong>agents</strong> plugin writes e2e-demo's tests, and <strong>e2e-demo</strong> tests the
+						<a href="https://automationexercise.com/">automationexercise.com</a> shop and its API.
+					</figcaption>
+				</figure>
+			</section>
+
+			<section class="wrap" aria-labelledby="writing-heading">
+				<h2 id="writing-heading">Writing</h2>
+				<ul class="writing">
+					<li>
+						<a href="https://benweese.com/building-playwright-agents-lessons-from-the-deep-trenches/"
+							>Building Playwright Agents: Lessons from the Trenches</a
+						>
+						<p>Setup, costs and lessons from using Playwright agents with Claude Code.</p>
+					</li>
+					<li>
+						<a href="https://benweese.com/blog/">The blog on benweese.com</a>
+						<p>Everything else I write about testing and automation.</p>
+					</li>
+				</ul>
+			</section>
+		</main>
+
+		<footer class="site-footer">
+			<div class="wrap">
+				<p>Main site: <a href="https://benweese.com/">benweese.com</a></p>
+				<ul class="footer-links">
+					<li><a href="mailto:ben@benweese.com">ben@benweese.com</a></li>
+					<li><a href="https://github.com/benweese">GitHub</a></li>
+				</ul>
+			</div>
+		</footer>
+	</body>
+</html>
