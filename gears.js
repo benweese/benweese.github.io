@@ -34,7 +34,7 @@
 			root.classList.add("is-bug", "is-jam");
 			wait(1100, function () { root.classList.remove("is-jam"); });
 			wait(600, function () { root.classList.add("show-note"); });
-			wait(4800, function () { root.classList.remove("show-note"); });
+			wait(7000, function () { root.classList.remove("show-note"); });
 			wait(5200, function () { root.classList.remove("is-bug"); schedule(false); });
 		}
 		schedule(true);
